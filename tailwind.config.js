@@ -7,6 +7,12 @@ export default {
         nunito: ["Nunito", "sans-serif"],
         nunito_sans: ["Nunito Sans", "sans-serif"],
       },
+      colors: {
+        primary_black: "#101010",
+        primary_white: "#E0E0E2",
+        white_mode_bg: "#FDFDFB",
+        main_orange: "#fcac3c",
+      },
     },
   },
   plugins: [],
