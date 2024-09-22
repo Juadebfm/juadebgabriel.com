@@ -1,20 +1,31 @@
 // App.js
-import React from "react";
+import React, { useContext } from "react";
 import Navbar from "./components/Navbar";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { ScrollProvider } from "./context/ScrollContext";
 import Home from "./pages/Home";
 import CustomScroll from "./lib/CustomScroll";
+import { ThemeContext } from "./context/ThemeContext";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import Terms from "./pages/Terms";
 
 const App = () => {
+  const { isDarkMode } = useContext(ThemeContext);
   return (
     <ScrollProvider>
-      <div className="bg-primary_black text-primary_white">
+      <div
+        className={
+          isDarkMode
+            ? "bg-primary_black text-primary_white"
+            : "bg-white_mode_bg text-primary_black"
+        }
+      >
         <Router>
-          <Navbar />
           <CustomScroll />
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/privacy" element={<PrivacyPolicy />} />
+            <Route path="/terms" element={<Terms />} />
           </Routes>
         </Router>
       </div>
