@@ -17,7 +17,6 @@ const Navbar = () => {
     { name: "Process", href: "/process" },
     { name: "Services", href: "/services" },
     { name: "Portfolio", href: "/portfolio" },
-    { name: "Benefits", href: "/benefits" },
     { name: "Let's Talk", href: "/contact" },
   ];
 
@@ -40,9 +39,9 @@ const Navbar = () => {
   return (
     <nav
       ref={navbarRef}
-      className={`w-[90%] mx-auto border-[0.5px] ${
+      className={`w-[95%] bg-primary_black/10 backdrop-blur-lg backdrop-opacity-40 mx-auto z-20 border-[0.5px] ${
         isDarkMode ? "border-primary_white" : "border-primary_black"
-      } rounded-full fixed top-10 left-1/2 transform -translate-x-1/2 px-5 py-4 flex items-center justify-between transition-colors duration-300 ${
+      } rounded-full fixed top-10 left-1/2 transform -translate-x-1/2 px-5 py-4 grid grid-cols-3 items-stretch justify-between transition-colors duration-300 ${
         isDarkMode
           ? "bg-primary_black text-primary_white"
           : "bg-white_mode_bg text-primary_black"
@@ -55,7 +54,7 @@ const Navbar = () => {
       </div>
 
       {/* Render navigation links dynamically */}
-      <ul className="flex items-center gap-14 text-[20px]">
+      <ul className="flex items-center gap-14">
         {navLinks.map((link) => (
           <li key={link.name}>
             <Link
@@ -72,11 +71,7 @@ const Navbar = () => {
         <button onClick={toggleTheme} className="focus:outline-none">
           {isDarkMode ? <IoSunnySharp size={24} /> : <IoMoon size={24} />}
         </button>
-        <Button
-          btnText="Book a call"
-          showPulse={true}
-          btnStyle="text-[18px] capitalize"
-        />
+        <Button btnText="Book a call" showPulse={true} btnStyle="capitalize" />
       </div>
     </nav>
   );

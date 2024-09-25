@@ -10,7 +10,7 @@ const Button = ({ btnText, btnFunc, btnStyle, showPulse = false }) => {
         isDarkMode
           ? "border-primary_white hover:bg-primary_white hover:text-primary_black"
           : "border-primary_black hover:bg-primary_black hover:text-primary_white"
-      } rounded-full h-[53px] w-auto transition-colors duration-300 px-5`}
+      } rounded-full h-[53px] w-auto transition-colors duration-300 px-5 pr-6`}
       onClick={btnFunc}
     >
       {showPulse && (

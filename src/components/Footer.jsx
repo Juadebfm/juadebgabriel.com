@@ -14,14 +14,14 @@ import { getCurrentYear } from "../utils/date";
 const Footer = () => {
   const date = getCurrentYear();
   return (
-    <footer className="w-full fixed bottom-0 left-0 bg-white_mode_bg text-primary_black p-10">
+    <footer className="w-full relative bg-white_mode_bg text-primary_black p-10">
       <section className="flex items-center justify-start w-[70%] gap-16">
         <div className="flex flex-col items-start justify-start">
           <h3 className="text-[24px]">Follow Me</h3>
           <div className="flex items-center justify-start gap-5 mt-[20px]">
             <Link
               className=" hover:text-primary_white hover:bg-primary_black cursor-pointer hover:border hover:border-primary_black text-[21px] border border-[#7f7f7f] rounded-full p-3 duration-150 transition-all"
-              href="https://twitter.com/Juadeb1"
+              href="https://x.com/Juadeb1"
             >
               <FaXTwitter />
             </Link>
@@ -33,13 +33,13 @@ const Footer = () => {
             </Link>
             <Link
               className=" hover:text-primary_white hover:bg-primary_black cursor-pointer hover:border hover:border-primary_black text-[21px] border border-[#7f7f7f] rounded-full p-3 duration-150 transition-all"
-              href="https://twitter.com/Juadeb1"
+              href="https://web.facebook.com/profile.php?id=61557265640179"
             >
               <FiFacebook />
             </Link>
             <Link
               className=" hover:text-primary_white hover:bg-primary_black cursor-pointer hover:border hover:border-primary_black text-[21px] border border-[#7f7f7f] rounded-full p-3 duration-150 transition-all"
-              href="https://twitter.com/Juadeb1"
+              href="https://www.linkedin.com/in/juadebade/"
             >
               <CiLinkedin />
             </Link>
@@ -50,19 +50,19 @@ const Footer = () => {
           <div className="flex items-center justify-start gap-5 mt-[20px]">
             <Link
               className=" hover:text-primary_white hover:bg-primary_black cursor-pointer hover:border hover:border-primary_black text-[21px] border border-[#7f7f7f] rounded-full p-3 duration-150 transition-all"
-              href="https://twitter.com/Juadeb1"
+              href="https://t.me/Juadebgabriel"
             >
               <PiTelegramLogoLight />
             </Link>
             <Link
               className=" hover:text-primary_white hover:bg-primary_black cursor-pointer hover:border hover:border-primary_black text-[21px] border border-[#7f7f7f] rounded-full p-3 duration-150 transition-all"
-              href="https://twitter.com/Juadeb1"
+              href="https://wa.me/7063116133"
             >
               <BsWhatsapp />
             </Link>
             <Link
               className=" hover:text-primary_white hover:bg-primary_black cursor-pointer hover:border hover:border-primary_black text-[21px] border border-[#7f7f7f] rounded-full p-3 duration-150 transition-all"
-              href="https://twitter.com/Juadeb1"
+              href="tel:+2347063116133"
             >
               <MdOutlinePhoneInTalk />
             </Link>
