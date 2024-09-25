@@ -39,7 +39,7 @@ const Navbar = () => {
   return (
     <nav
       ref={navbarRef}
-      className={`w-[95%] bg-primary_black/10 backdrop-blur-lg backdrop-opacity-40 mx-auto z-20 border-[0.5px] ${
+      className={`w-[95%] bg-primary_black/10 backdrop-blur-xl backdrop-opacity-100 mx-auto z-20 border-[0.5px] ${
         isDarkMode ? "border-primary_white" : "border-primary_black"
       } rounded-full fixed top-10 left-1/2 transform -translate-x-1/2 px-5 py-4 grid grid-cols-3 items-stretch justify-between transition-colors duration-300 ${
         isDarkMode
@@ -54,7 +54,7 @@ const Navbar = () => {
       </div>
 
       {/* Render navigation links dynamically */}
-      <ul className="flex items-center gap-14">
+      <ul className="flex items-center justify-center gap-14">
         {navLinks.map((link) => (
           <li key={link.name}>
             <Link
@@ -67,7 +67,7 @@ const Navbar = () => {
         ))}
       </ul>
 
-      <div className="flex items-center justify-center gap-5">
+      <div className="flex items-center justify-end gap-5">
         <button onClick={toggleTheme} className="focus:outline-none">
           {isDarkMode ? <IoSunnySharp size={24} /> : <IoMoon size={24} />}
         </button>
